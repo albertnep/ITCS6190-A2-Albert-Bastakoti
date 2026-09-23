@@ -35,10 +35,7 @@ public class DocumentSimilarityMapper extends Mapper<LongWritable, Text, Text, T
     @Override
     protected void map(LongWritable key, Text value, Context context)
             throws IOException, InterruptedException {
-        // TODO: split the line into the document ID and the text,
-        //       tokenize the text following the rules above,
-        //       and emit what the reducer needs.
-        
+
         String doc = value.toString().trim();
         String[] allWords = doc.split("\\s+");
         String DocumentKey = (allWords[0]);
